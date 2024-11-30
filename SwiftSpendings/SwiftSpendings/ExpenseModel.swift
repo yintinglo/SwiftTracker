@@ -3,6 +3,7 @@ import Foundation
 enum ExpenseCategory: String, CaseIterable, Identifiable, Codable {
     case  food = "Food"
     case transportation = "Transportation"
+    case rent = "Rent"
     case entertainment = "Entertainment"
     case other = "Other"
     
