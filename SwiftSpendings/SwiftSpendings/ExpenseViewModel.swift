@@ -45,6 +45,7 @@ class ExpenseViewModel: ObservableObject {
         expenses.reduce(0) { $0 + $1.amount }
     }
     
+    // expenses categorized by their type of expense run through a Map Reducer
     var expenseByCategory: [ExpenseCategoryData] {
         expenses
             .reduce(into: [:]) { result, expense in
@@ -61,7 +62,7 @@ class ExpenseViewModel: ObservableObject {
         }
     }
     
-    func expenses(for dateRange: ClosedRange<Date>) -> [Expense] {
+    func expenses(for dateRange: ClosedRange<Date>) -> [Expense] { //returns expense for given date(s)
         expenses.filter { dateRange.contains($0.date) }
     }
 }

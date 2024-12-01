@@ -1,5 +1,6 @@
 import Foundation
 
+// lays foundation for the categories in the expense tracker
 enum ExpenseCategory: String, CaseIterable, Identifiable, Codable {
     case  food = "Food"
     case transportation = "Transportation"
